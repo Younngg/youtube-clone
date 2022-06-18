@@ -45,7 +45,7 @@
   font-size: 0.6rem;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 48rem) {
   .title,
   .channel {
     font-size: 1rem;
@@ -55,5 +55,8 @@
   }
   .channel {
     font-size: 0.8rem;
+  }
+  .container.grid {
+    width: 100%;
   }
 }

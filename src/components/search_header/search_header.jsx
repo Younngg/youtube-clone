@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useRef } from 'react';
 import styles from './search_header.module.css';
 
-const SearchHeader = ({ onSearch }) => {
+const SearchHeader = memo(({ onSearch }) => {
   const inputRef = useRef();
+
+  const reload = () => {
+    window.location.reload();
+  };
+
   const handleSearch = () => {
     const value = inputRef.current.value;
     onSearch(value);
   };
+
   const onClick = () => {
     handleSearch();
   };
+
   const onKeyPress = (event) => {
     if (event.key === 'Enter') {
       handleSearch();
@@ -19,7 +26,7 @@ const SearchHeader = ({ onSearch }) => {
 
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
+      <div className={styles.logo} onClick={reload}>
         <img className={styles.img} src='/images/logo.png' alt='logo' />
         <h1 className={styles.title}>Youtube</h1>
       </div>
@@ -39,6 +46,6 @@ const SearchHeader = ({ onSearch }) => {
       </button>
     </header>
   );
-};
+});
 
 export default SearchHeader;
