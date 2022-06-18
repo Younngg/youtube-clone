@@ -1,7 +1,14 @@
 .container {
-  width: 50%;
   height: fit-content;
   padding: 0.2em;
+}
+
+.container.grid {
+  width: 50%;
+}
+
+.container.list {
+  width: 100%;
 }
 
 .video {
@@ -36,4 +43,17 @@
 
 .channel {
   font-size: 0.6rem;
+}
+
+@media screen and (max-width: 950px) {
+  .title,
+  .channel {
+    font-size: 1rem;
+  }
+  .title {
+    font-weight: 500;
+  }
+  .channel {
+    font-size: 0.8rem;
+  }
 }
