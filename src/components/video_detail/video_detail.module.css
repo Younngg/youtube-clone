@@ -1,7 +1,9 @@
 .detail {
   padding: 0.2em;
+  color: #fff;
 }
 
 .description {
   white-space: pre-wrap;
+  line-height: 1.5;
 }

@@ -1,54 +1,82 @@
 .container {
   height: fit-content;
-  padding: 0.2em;
+  padding: 0.7em;
 }
 
 .container.grid {
-  width: 50%;
+  width: 20%;
 }
 
 .container.list {
   width: 100%;
+  padding: 0.2em;
+}
+
+.list .video {
+  flex-direction: row;
 }
 
 .video {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
-  border: 1px solid lightgray;
-  box-shadow: 3px 3px 5px 0px rgba(191, 191, 191, 0.53);
   cursor: pointer;
   transition: transform 250ms ease-in;
+  flex-direction: column;
 }
 
 .video:hover {
   transform: scale(1.02);
 }
 
-.thumbnail {
+.list .thumbnail {
   width: 40%;
+}
+.thumbnail {
+  width: 100%;
   height: 100%;
 }
 
 .metadata {
   margin-left: 0.2em;
+  margin-top: 0.8em;
+  height: 7em;
 }
-
+.list .metadata {
+  padding-left: 0.2rem;
+}
 .title,
 .channel {
   margin: 0;
-  font-size: 0.8rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
 }
 
 .channel {
-  font-size: 0.6rem;
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  color: #999;
+  font-weight: 400;
 }
-
+@media screen and (max-width: 1400px) {
+  .container.grid {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .container.grid {
+    width: 33%;
+  }
+}
 @media screen and (max-width: 48rem) {
   .title,
   .channel {
     font-size: 1rem;
+    padding-left: 15px;
   }
   .title {
     font-weight: 500;
@@ -58,5 +86,16 @@
   }
   .container.grid {
     width: 100%;
+  }
+  .video {
+    flex-direction: row;
+    align-items: center;
+  }
+  .thumbnail {
+    width: 40%;
+  }
+  .metadata {
+    height: auto;
+    margin-top: 0;
   }
 }
