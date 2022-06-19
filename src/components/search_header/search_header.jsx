@@ -27,11 +27,7 @@ const SearchHeader = memo(({ onSearch }) => {
   return (
     <header className={styles.header}>
       <div className={styles.logo} onClick={reload}>
-        <img
-          className={styles.img}
-          src='../public/images/logo.png'
-          alt='logo'
-        />
+        <img className={styles.img} src='images/logo.png' alt='logo' />
         <h1 className={styles.title}>Youtube</h1>
       </div>
       <input
@@ -44,7 +40,7 @@ const SearchHeader = memo(({ onSearch }) => {
       <button className={styles.button} type='submit' onClick={onClick}>
         <img
           className={styles.buttonImg}
-          src='../public/images/search.png'
+          src='images/search.png'
           alt='search'
         />
       </button>
